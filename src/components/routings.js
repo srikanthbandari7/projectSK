@@ -10,6 +10,7 @@ import Service from "./MainMenu/service.js";
 import Contact from "./MainMenu/contact.js";
 import pagenotfound from "./pagenotfound.js";
 import Itservice from "./MainMenu/itservice.js";
+import Autobatching from './MainMenu/autobatching.js'
 
 //Class_component
 import Myclass from './myclass'
@@ -31,13 +32,20 @@ import HooksView from './HooksAPI/hooksView.js'
 import HooksEdit from './HooksAPI/hooksEdit.js'
 import HooksSignup from './HooksAPI/hooksSingup.js'
 import HooksRedux from './HooksRedux/HooksRedux.js'
+import graphData from './graph.js'
+import lineGraph from './lineGraph.js'
+import LineChart from "./lineChart.js";
+import LineGraphDownload from './linegraphDownload.js'
+import UploadData from './uploadData.js'
+import uploadExcel from "./uploadExcel.js";
+import CombinedGraph from './combinedGraph.js'
+import Thimble from './MainMenu/thimble.js'
 
 
 
 
 //Router_Package
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-
 //Routing_setup
 function Routings() {
   return (
@@ -49,7 +57,7 @@ function Routings() {
       <Switch>
    
        {/* Load Home component as Default page of the Project */}
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={graphData} />
 
       <Route path="/home" component={Home} />
 
@@ -103,12 +111,22 @@ function Routings() {
 
         <Route   path="/HooksRedux" component={HooksRedux} />
         
+        <Route   path="/autobatching" component={Autobatching} />
+        <Route   path="/lineGraph" component={lineGraph} />
+        <Route   path="/graph" component={graphData} />
+        <Route   path="/lineChart" component={LineChart} />
+        <Route   path="/linegraphDownload" component={LineGraphDownload} />
+        <Route   path="/uploadData" component={UploadData} />
+        <Route   path="/uploadExcel" component={uploadExcel} />
+        <Route   path="/combinedGraph" component={CombinedGraph} />
+        <Route   path="/thimble" component={Thimble} />
+
 
       <Redirect to="/home"/>
 
 
       <Route component={pagenotfound} />
-
+ 
       </Switch>
 
 

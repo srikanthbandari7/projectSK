@@ -1,35 +1,41 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
+import bellA from '../../assets/images/bellA.png'
+import bellB from '../../assets/images/bellB.png'
 
- class Lifecycle extends Component
-  {
-    //Constructor_is_Mounting_method
-    constructor(props){
-        super(props);
-        this.state = {}
-        console.log(`********Constructor_is_Mounting_method*********`)
+class Lifecycle extends Component {
+  constructor(){
+    super();
+    this.state={
+      text:'Subscribe',
+      message:'Please Subscribe to my channel',
+      imageUrl:bellB,
+      color:'black'
     }
+  }
+ changestatus=()=>{
+  this.setState({
+    message:'Click on bell  to get Notification',
+    text:'Subscribed',
+    color:'white'
+  })
+ }
 
-    componentWillMount(){
-        console.log(`********componentWillMount_is_Mounting_method*********`)
-    }
+ changebellicon=()=>{
+  this.setState({
+    message:'Thank you for Subscribing!',
+    imageUrl:bellA
+  })
+ }
+  
 
-
-    //Render_is_Mounting_method
-    render(){
-        console.log(`**********Render_is_Mounting_method***********`)
-        return(<>
-            <div className="p-5 text-center">
-
-                <h2>REACT CLASS COMPONENT LIFE CYCLE PROCESS</h2>
-                
-            </div>
-            </>)
-    }
-
-    //R estAPI_Calls
-    componentDidMount(){
-        console.log(`********componentDidMount_is_Mounting_method*********`)
-    }
+  render() {
+    return <div className='App'>
+      <h2>{this.state.message}</h2>
+      <button onClick={this.changestatus} style={{color:this.state.color}} >{this.state.text}</button><br/>
+      <img style={{height:'60px', width:'60px'}} src={this.state.imageUrl} onClick={this.changebellicon} />
+      <button>SK</button>
+    </div>;
+  }
 }
 
 export default Lifecycle;

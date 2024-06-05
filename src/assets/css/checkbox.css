@@ -1,0 +1,31 @@
+/* styles.css */
+
+.custom-checkbox {
+    width: 20px; /* Set width */
+    height: 20px; /* Set height */
+    -webkit-appearance: none; /* Remove default appearance */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #000; /* Define border */
+    border-radius: 4px; /* Add some border radius */
+    cursor: pointer;
+    outline: none; /* Remove default focus styling */
+  }
+  
+  /* Define custom appearance for checked state */
+  .custom-checkbox:checked {
+    background-color: rgb(114, 49, 12);
+  }
+  
+  /* Define custom appearance for when checkbox is checked and hovered */
+  .custom-checkbox:checked:hover {
+    background-color: #dbbd0f;
+  }
+  
+  /* Define custom appearance for label text */
+  .label {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+  

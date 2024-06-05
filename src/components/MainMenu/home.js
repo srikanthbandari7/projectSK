@@ -1,6 +1,7 @@
 //Home.js Module
 
 import React from "react";
+import ExcelToTextConverter from './autobatching'
 
 //Creat Home Component
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
   return (
     <>
       <h1 className="text-center text-primary">{cname}</h1>
+      <ExcelToTextConverter/>
 
       <p>{msg} </p>
 

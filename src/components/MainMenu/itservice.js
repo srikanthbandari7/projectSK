@@ -1,12 +1,14 @@
 import React from "react";
+import { BrowserRouter, Link, Route, Switch } from  "react-router-dom";
+
 
 //Nested Components
 import Webapplication from "./itservice/webapplication.js";
 import Mobileapplication from "./itservice/mobileapplication.js";
 import uiuxdesign from "./itservice/uiuxdesign.js";
 import Projectsupport from "./itservice/projectsupport";
+import Autobatching from './itservice/autobatching.js'
 
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
 var services = [
 {
@@ -24,6 +26,10 @@ var services = [
 {
   title : 'Project Support',
   routename : '/support'
+},
+{
+  title:'Auto Batching',
+  routename:'/autobatch'
 }
 ]
 
@@ -101,6 +107,8 @@ function Itservice() {
                   <Route path="/itservice/uiux" component={uiuxdesign} />
 
                   <Route path="/itservice/support" component={Projectsupport} />
+
+                  <Route path="/itservice/autobatch" component={Autobatching} />
                 </Switch>
               </div>
             </div>

@@ -7,8 +7,11 @@ import {  NavLink } from "react-router-dom";
 
 function Header() {
 
-var MenuNames = ["Home", "About", "Service", "Itservice","Contact", "Myclass", "Lifecycle", "Restapi", "RB", "Signup", "RRC", "RSHooks", "RUSEffect", "Pagination", "HooksUser", "HooksSignup", "HooksRedux"]
-           
+  var MenuNames =["Lifecycle"]
+
+// var MenuNames = ['CombinedGraph', 'Thimble']
+// var MenuNames = ['LineChart',  'Graph', 'LineGraph', 'UploadData']
+    //"RUSEffect", "Pagination", "HooksUser", "HooksSignup", "HooksRedux", "Autobatching",   "Home", "About", "Service", "Itservice","Contact", "Myclass", "Lifecycle", "Restapi", "RB", "Signup", "RRC", "RSHooks",    
 
   return (
     <>
